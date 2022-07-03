@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;600;700;900&display=swap");
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inconsolata", monospace;
+}
+
+@media (min-width: 991px) {
+  .collapse {
+    display: flex !important;
+    justify-content: end !important;
+  }
+}
+
+.hero {
+  background-image: url("./images/11.jpg"); /* The image used */
+  height: 90vh; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  position: relative;
+  .msg {
+    position: fixed;
+    top: 10;
+    left: 0;
+    margin: 0;
+    writing-mode: vertical-lr;
+  }
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  cursor: pointer;
+  &:hover {
+    transform: translate(0, -10px);
+    transition: all 0.2s ease-in-out;
+  }
+  &:active {
+    animation: shake 0.4s;
+    transition: all cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: skewX(-40deg);
+  }
+  5% {
+    transform: skewX(40deg);
+  }
+  10% {
+    transform: skewX(-40deg);
+  }
+  15% {
+    transform: skewX(40deg);
+  }
+  20% {
+    transform: skewX(0deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+.img-fluid {
+  width: 100%;
+}
+.about {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+}
